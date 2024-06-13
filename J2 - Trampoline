@@ -1,0 +1,38 @@
+J2 - Trampoline
+0
+Tech'Rex a longuement peaufiné sa chorégraphie de trampoline.
+
+La chorégraphie de Tech'Rex consiste en une série de sauts qu'il va réaliser sur un seul axe, en sautant relativement à gauche ou à droite suivant un offset. Tech'Rex débute sa chorégraphie à la position 0. Sa chorégraphie se termine lorsqu'il saute en dehors du trampoline.
+
+Pour exécuter sa chorégraphie, Tech'Rex suit son plan d'offsets. Par exemple, prenons le plan suivant:
+
+1
+3
+0
+1
+-3
+
+Ce plan s'exécute sur un trampoline de longueur 5. Tech'Rex débute sa chorégraphie à l'index 0, et va sauter à un nouvel index, relativement de la valeur d'offset à la position courante dans le plan. De plus, pour varier la chorégraphie, la valeur d'offset est incrémentée juste après que Tech'Rex ait effectué son saut.
+
+Sur l'exemple précédent, cela donne la série de sauts suivante:
+
+Etat initial:
+1 3 0 1 -3  
+^
+Saut 1:
+2 3 0 1 -3
+  ^
+Saut 2:
+2 4 0 1 -3
+         ^
+Saut 3:         
+2 4 0 1 -2
+  ^
+Saut 4:
+2 5 0 1 -2
+Tech'Rex aura donc effectué 4 sauts dans cette chorégraphie.
+
+La chorégraphie de notre ambitieux Tech'Rex est autrement plus complexe (le fichier d'entrée de l'exercice).
+
+Combien de sauts Tech'Rex va-t-il effectuer en exécutant sa chorégraphie ?
+
