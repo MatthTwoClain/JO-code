@@ -1,5 +1,5 @@
 J2 - Trampoline
-0
+
 Tech'Rex a longuement peaufiné sa chorégraphie de trampoline.
 
 La chorégraphie de Tech'Rex consiste en une série de sauts qu'il va réaliser sur un seul axe, en sautant relativement à gauche ou à droite suivant un offset. Tech'Rex débute sa chorégraphie à la position 0. Sa chorégraphie se termine lorsqu'il saute en dehors du trampoline.
