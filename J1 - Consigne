@@ -1,5 +1,5 @@
 J1 - Trail en forêt
-0
+
 Une des épreuves cette année pour tech rex est le trail en forêt. Du fait de la topologie locale, les arbres ne poussent que sur des coordonnées correspondant à des entiers exacts sur une grille. Ils sont identifiés sur la cartes par des (#), les (.) étant un espace libre. Par exemple :
 
 ..##.......
