@@ -1,0 +1,44 @@
+J1 - Trail en forêt
+0
+Une des épreuves cette année pour tech rex est le trail en forêt. Du fait de la topologie locale, les arbres ne poussent que sur des coordonnées correspondant à des entiers exacts sur une grille. Ils sont identifiés sur la cartes par des (#), les (.) étant un espace libre. Par exemple :
+
+..##.......
+#...#...#..
+.#....#..#.
+..#.#...#.#
+.#...##..#.
+..#.##.....
+.#.#.#....#
+.#........#
+#.##...#...
+#...##....#
+.#..#...#.#
+Ces arbres ne sont cependant pas les seuls : la foret se répète indéfiniment sur la droite :
+
+..##.........##.........##.........##.........##.........##.......  --->
+#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..
+.#....#..#..#....#..#..#....#..#..#....#..#..#....#..#..#....#..#.
+..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#
+.#...##..#..#...##..#..#...##..#..#...##..#..#...##..#..#...##..#.
+..#.##.......#.##.......#.##.......#.##.......#.##.......#.##.....  --->
+.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#
+.#........#.#........#.#........#.#........#.#........#.#........#
+#.##...#...#.##...#...#.##...#...#.##...#...#.##...#...#.##...#...
+#...##....##...##....##...##....##...##....##...##....##...##....#
+.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#.#..#...#.#  --->
+Le début du trail se fait dans le coin en haut à gauche, et il faut atteindre le bas de la forêt. Le sentier du trail ne peut suivre que certaines pentes le long de la forêt. Avant de pouvoir organiser le trail, il faut identifier les arbres qu'il faudra baliser si l'on suit une pente de 1 vers le bas, 3 vers la droite. Depuis la position de départ du trail, aller de position en position en comptant a chaque fois 3 vers la droite et 1 vers le bas, jusqu'à atteindre le bas de la carte. Les positions visitées dans l'exemple ci-dessus sont marquées ci-dessous avec un O si l'espace est libre, et un X s'il contient un arbre :
+
+..##.........##.........##.........##.........##.........##.......  --->
+#..O#...#..#...#...#..#...#...#..#...#...#..#...#...#..#...#...#..
+.#....X..#..#....#..#..#....#..#..#....#..#..#....#..#..#....#..#.
+..#.#...#O#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#..#.#...#.#
+.#...##..#..X...##..#..#...##..#..#...##..#..#...##..#..#...##..#.
+..#.##.......#.X#.......#.##.......#.##.......#.##.......#.##.....  --->
+.#.#.#....#.#.#.#.O..#.#.#.#....#.#.#.#....#.#.#.#....#.#.#.#....#
+.#........#.#........X.#........#.#........#.#........#.#........#
+#.##...#...#.##...#...#.X#...#...#.##...#...#.##...#...#.##...#...
+#...##....##...##....##...#X....##...##....##...##....##...##....#
+.#..#...#.#.#..#...#.#.#..#...X.#.#..#...#.#.#..#...#.#.#..#...#.#  --->
+Dans cet exemple, la pente utilisée implique 7 arbres à baliser.
+
+Combien d'arbres sont balisés avec la map réelle ? (le fichier input.txt)
