@@ -1,0 +1,35 @@
+J4 - Réparation de coupe
+
+La coupe, qui trônait fièrement en haut du stade, a malencontreusement été renversée par une armée de supporters (de Tech'Rex ?) trop enthousiastes. Elle a dégringolé tous les gradins, subissant de lourds dégâts !
+
+La coupe était symétrique selon l'axe vertical passant par le centre.
+
+L'objectif est de réparer la coupe en lui ajoutant le minimum de morceaux possible (symbolisés par des '#' dans l'entrée) afin qu'elle soit à nouveau symétrique.
+
+Format d'entrée
+1ère ligne: deux entiers W et H, la largeur, et la hauteur du dessin
+H prochaines lignes: une chaine de caractères de longueur W, contenant des '#' lorsqu'il y a un morceau de coupe, sinon des '.'
+
+Exemple
+Prenons l'entrée suivante:
+
+5 6
+###.#
+###..
+..##. 
+..#..
+..#..
+###..
+En reconstruisant la coupe par symétrie, on obtient le dessin suivant:
+
+#####
+#####
+.###.
+..#..
+..#..
+#####
+Pour reconstruire la coupe, il aura fallu ajouter 6 morceaux.
+
+Résultat attendu
+Le nombre minimal de morceaux à ajouter à la coupe contenue dans le fichier input.txt pour la rendre symétrique.
+
