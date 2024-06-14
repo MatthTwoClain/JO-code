@@ -1,0 +1,55 @@
+J5 - Classement de gymnastique
+0
+Une équipe Rex s'étire !
+Notre Tech'Rex est aujourd'hui en compétition, de retour à l'aréna de Bercy pour la compétition de gymnastique artistique ! La compétition s'annonce rude et les épreuves individuelles viennent de se terminer sous la clameur des support(ech) !
+
+09h45, ça y est l'heure est venue, l'équipe REX se prépare ! Étirement, échauffement, moulinet des poignets, ils sont fin prêt pour la compétition !
+
+10h50, la ferveur bat son plein, c'est le moment de Tech'Rex qui s'attaque au barres asymétrique ! Mais quel voltige pour notre champion !
+
+11h45, ça y est la compétition touche à sa fin, mais quels ont été les résultats ?
+
+Compétition
+Notre équipe REX a participé avec ses membres à diverses épreuves : Exercice au sol, Cheval d'arçons, Barre asymétrique, Poutre et Anneaux ! Malheureusement une Cyber attaque à paralysé le système par l'afflux massif de données fantômes venant parasiter les données relatives au concours, le jury ne peut donc plus se baser le classement affiché à l'écran !
+
+Ils ont pu récupérer une extraction de l'ensemble des données actuellement stockées représentant tout les athlètes et leurs performances aux derniers concours dont celui du jour.
+
+|     Nom & Prénom           |Concours                          |Score "Sol"  |Score "Arçons"  |Score "Barre"  |Score "Poutre"  |Score "Anneaux"  |Score "Acrobatie"                                                 |
+|----------------|-------------------------------|-------------------------------|-------------------------------|-------------------------------|-----------------------------|-----------------------------|-----------------------------|
+|Anna Javaéfix|Jeux Olympique						|5.78|8.6|1.4|5.63|4|0|
+|Claude OpenChips|Concours régional du poitoux		|2.4|1.2|6.1|1|1.4|5|
+|Jérôme VmouaiRE|Championnat du berry				|4.12|2.1|2.2|2.42|3.1|4.5|
+|Tech Rex|Jeux Olympique							|6.25|4.7|5.7|7|6.8|0|
+|Tech Rex|Championnat du monde						|6.28|4.5|3.4|7.6|5.6|0|
+|Réda Topenchifte|Course bénévole de Clermont		|5.21|3.6|1.2|9.99|9.1|1.3|
+|Tech Rex|Jeux Olympique							|6.24|3.8|6.1|8|2.8|0|
+L'objectif est d' identifier le meilleur score de certains athlètes pour une compétition donnée. La liste des athlètes ainsi que le nom de la compétition sont donnés dans les entrées de l'exercice (voir ci-dessous).
+
+Pour l'exemple de données ci-dessus, si:
+
+l'équipe Tech Rex est composée de Tech Rex et de Anna Javaéfix
+la compétition recherchée est Jeux Olympique
+les catégories recherchées sont Sol et Barre
+Alors:
+
+les meilleurs scores de Tech Rex sont respectivement 6.25,6.1
+les meilleurs scores de Anna Javaéfix sont respectivement de 5.78,1.4
+Le résultat attendu sera 6.25,6.1-5.78,1.4 (voir Format de sortie ci-dessous).
+
+Malheureusement il y a une quantité astronomique de données saurez vous retrouver l'ensemble des résultats de l'équipe REX ?
+
+Format d'entrée
+Ligne 1: Le nom de la compétition à évaluer (Ex : Jeux Olympique)
+
+Ligne 2: Le nom de chacun des gymnastes de l'équipe Rex, séparé par des virgules (Ex : Tech Rex,Mario Penshift)
+
+Ligne 3: Les catégories pour lesquelles les résultats sont attendus, séparées par des virgules (des épreuves ne sont pas comptabilisées et ne doivent pas apparaître dans le résultat) (Ex : Sol,Arcons,Acrobatie)
+
+Ligne 4: Un entier listant le nombre d'occurrence d'enregistrements (Ex : 100000)
+
+N prochaines lignes: Une chaîne de caractères contenant : le nom de l'athlète, le nom du concours de l'enregistrement, le score de l'épreuve sol, le score de l'épreuve arcons, le score de l'épreuve barre, le score de l'épreuve poutre, le score de l'épreuve anneaux et le score de l'épreuve acrobatie. Les éléments sont séparés par des ','.
+
+Format de sortie
+Une seule ligne, contenant pour chacun des membres de l'équipe REX le meilleur score qu'ils ait effectué à la compétition demandée pour les catégories recherchées. Les scores d'un même athlète sont séparés par des virgules, les ensembles de score de chaque athlète sont séparés par des tirets -.
+
+Dans le cas ci-dessus le résultat serait : 6.25,6.1-5.78,1.4
