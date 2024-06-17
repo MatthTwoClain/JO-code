@@ -1,0 +1,52 @@
+J6 - Communication des résultats
+
+Communication des résultats
+Lors d'un combat de judo, où Tech'Rex a réussi à obtenir ippon sur son adversaire. L'arbitre tente de mettre à jour le résultat au moyen de son outil de transmission, mais vois une erreur s'afficher :
+
+Erreur de syntaxe dans le système de communication sur la ligne : 
+toutes les lignes
+Mince, toutes ? ! Il faut absolument réparer ça pour la suite de la compétition. Heureusement, une copie du système est fournie (l'input).
+
+La syntaxe du système de communication des points est constituée de plusieurs lignes contenant des groupes. Chaque ligne contient un ou plusieurs groupe, et les groupes contiennent eux-même 0 ou plusieurs groupes. Des groupes adjacents ne sont pas séparés par un séparateur. Si un groupe s'arrête, le prochain groupe (si présent) peut immédiatement démarrer. Chaque groupe doit s'ouvrir ou se fermer avec une des 4 paires de caractères.
+
+Si un groupe commence avec [, il doit terminer avec ].
+Si un groupe commence avec (, il doit terminer avec ).
+Si un groupe commence avec {, il doit terminer avec }.
+Si un groupe commence avec <, il doit terminer avec >.
+Ainsi, () est un groupe légal qui ne contient pas d'autre groupes, tout comme []. D'autre groupes plus complexes et valid sont par exemple ([]), {()()()}, <([{}])>, [<>({}){}[([])<>]], et même (((((((((()))))))))).
+
+Dans le système, des lignes sont incomplètes, d'autres corrompues. Il faut trouver les lignes corrompues.
+Une ligne corrompue se caractérise par un groupe qui se ferme avec le mauvais caractère. Exemples de groupes corrompus : (], {()()()>, (((()))}, et <([]){()}[{}]).
+De tels groupes peuvent apparaître n'importe où dans une ligne, et leur présence implique la corruption de la ligne entière.
+
+Par exemple, pour le système de transmission suivant :
+
+[({(<(())[]>[[{[]{<()<>>  
+[(()[<>])]({[<{<<[]>>(  
+{([(<{}[<>[]}>{[]{[(<()>  
+(((({<>}<{<{<>}{[]{[]{}  
+[[<[([]))<([[{}[[()]]]  
+[{[{({}]{}}([{[{{{}}([]  
+{<[[]]>}<{[{[{[]{()[[[]  
+[<(<(<(<{}))><([]([]()  
+<{([([[(<>()){}]>(<<{{  
+<{([{{}}[<[[[<>{}]]]>[]]  
+Certaines lignes sont juste incomplètes et ne doivent pas être prises en compte. Mais les 5 lignes suivantes sont corrompues :
+
+{([(<{}[<>[]}>{[]{[(<()> - Attendu ], trouvé } .  
+[[<[([]))<([[{}[[()]]] - Attendu ], trouvé ) .  
+[{[{({}]{}}([{[{{{}}([] - Attendu ), trouvé ] .  
+[<(<(<(<{}))><([]([]() - Attendu >, trouvé ) .  
+<{([([[(<>()){}]>(<<{{ - Attendu ], trouvé > .   
+A la rencontre d'un groupe corrompu sur une ligne, il faut s'arrêter au premier caractère incorrect fermant.
+
+Pour estimer le taux de corruption du système, le premier caractère illégal rencontré totalise un certain nombre de points :
+
+): 3 points.  
+]: 57 points.  
+}: 1197 points.  
+>: 25137 points.  
+Dans l'exemple précédent, un caractère illégal ) est présent 2 fois, (2*3 = 6 points), un caractère illégal ] présent une fois (57 points), un caractère illégal } présent une fois (1197 points), et un caractère illégal > présent une fois (25137 points). Cela totalise un taux de corruption pour ce fichier de 6+57+1197+25137 = 26397 points!
+
+Dans le système de transmission de l'arbitre, trouvez le premier caractère illégal dans chaque ligne corrompue. Quel est le taux de corruption pour le système ?
+
