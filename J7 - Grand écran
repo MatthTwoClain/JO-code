@@ -1,0 +1,23 @@
+J7 - Grand écran
+
+Mais qui a gagné ?
+Tech'Rex, dont la légèreté de la foulée est célèbre, a fait la course parfaite, le sprint de sa vie ! La course s'est jouée sur le fil, et les coureurs attendent impatiemment que les résultats s'affichent au tableau.
+
+Mais catastrophe, le tableau d'affichage semble avoir été endommagé. Au lieu d'afficher simplement le contenu, il affiche des chaines de caractères aléatoires.
+
+Aléatoires ? Les yeux surhumains de Tech'Rex décèlent un pattern: il semblerait que la lettre la plus fréquente de chaque colonne soit celle de la chaine de caractères originale.
+
+Par exemple dans l'entrée suivante:
+
+peaj
+yeao
+ytwh
+dhoh
+tunq
+
+La lettre la plus fréquente de la 1ère colonne est le y, le e dans la 2ème colonne, ainsi de suite jusqu'à former la chaine de caractères yeah.
+
+Les chaines de caractères affichées au tableau sont dans le fichier d'entrée.
+
+Trouverez-vous le contenu du message ?
+
