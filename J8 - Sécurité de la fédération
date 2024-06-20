@@ -1,0 +1,21 @@
+J8 - Sécurité de la fédération
+
+Les épreuves de gym sont terminées, il faut maintenant transmettre les résultats à la fédaration.
+
+Cependant, la fédération a décidé d'ajouter une sécurité pour la transmission des données, et il faut d'abord se synchroniser avec une chaîne de caractères transmise par le site.
+La synchronisation se fait par détection d'un marqueur de début de paquet dans la chaîne reçu. Le protocole décrit que le début du paquet est indiqué par une séquence de 4 caractères tous différents.
+
+Pour pouvoir assurer la sécurité avec le site, il faut trouver la première position où les 4 derniers caractères sont tous différents. De manière plus précise, il faut envoyer le nombre de caractère depuis le début de la chaîne jusqu'à la fin de ces 4 caractères.
+Par exemple, pour la chaîne suivante :
+
+mjqjpqmgbljsphdztnvjfqwrcgsmlb
+Après les 3 premiers caractères (mjq), il n'y a pas assez de caractère pour détecter le marqueur. Après 4 caractères (taille minimale du marqueur) , mjqj, ces 4 caractères ne sont pas tous différents, ce n'est donc pas le marqueur.
+La première fois qu'un marqueur apparaît est après le septième caractère. Après ce dernier, les 4 derniers caraactères sont jpqm et sont tous différents. Le résultat pour la synchronisation doit donc être 7.
+
+Voici d'autres exemples :
+
+bvwbjplbgvbhsrlpgdmjqwftvncz: premier marqueur après le caractère numéro 5
+nppdvjthqldpwncqszvftbrmjlhg: premier marqueur après le caractère numéro 6
+nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg: premier marqueur après le caractère numéro 10
+zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw: premier marqueur après le caractère numéro 11
+Combien de caractère doivent être traités avant que le premier marqueur de début de paquet soit détecté ?
